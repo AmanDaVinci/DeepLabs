@@ -1,2 +1,3 @@
 # DeepLabs
-EXPERIMENTAL Deep Learning Projects
+Experiments on Deep Learning  
+**Note:** *Some of these experiments might spawn real projects*

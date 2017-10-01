@@ -99,3 +99,12 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# Huge Data Files
+data/dogscats/train/
+data/dogscats/test/
+
+# Residue Files
+test.zip
+train.zip
+sample_submission.csv

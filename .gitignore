@@ -102,6 +102,7 @@ ENV/
 
 # Huge Data Files
 data/dogscats/train/
+data/dogscats/valid/
 data/dogscats/test/
 
 # Residue Files

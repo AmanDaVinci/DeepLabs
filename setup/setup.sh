@@ -5,6 +5,9 @@ echo"
 #####################################
 "
 
+# Go to Home
+cd ~
+
 # ensure system is updated and has basic build tools
 echo "\n\nSystem Update & Upgrade\n\n"
 sudo apt-get update
@@ -84,7 +87,7 @@ sudo cp include/* /usr/local/cuda/include/
 
 # configure jupyter and prompt for password
 echo "\n\nConfiguring jupyter and will prompt for password...\n\n"
-jupyter notebook --generate-config
+jupyter notebook --generate-config --allow-root
 jupass=`python -c "from notebook.auth import passwd; print(passwd())"`
 echo "c.NotebookApp.ip = '*'
 c.NotebookApp.password = u'"$jupass"'

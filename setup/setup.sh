@@ -92,4 +92,4 @@ jupass=`python -c "from notebook.auth import passwd; print(passwd())"`
 echo "c.NotebookApp.ip = '*'
 c.NotebookApp.password = u'"$jupass"'
 c.NotebookApp.open_browser = False
-c.NotebookApp.port = 9999" >> $HOME/.jupyter/jupyter_notebook_config.py
+c.NotebookApp.port = 8888" >> $HOME/.jupyter/jupyter_notebook_config.py

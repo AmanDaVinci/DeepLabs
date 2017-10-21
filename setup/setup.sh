@@ -61,7 +61,7 @@ root = /usr/local/cuda" > ~/.theanorc
 
 # install and configure keras
 echo "\n\nInstalling & Configuring Keras...\n\n"
-conda install keras
+conda install keras==1.2.2
 mkdir ~/.keras
 echo '{
     "epsilon": 1e-07,
@@ -84,6 +84,7 @@ tar -zxf cudnn.tgz
 cd cuda
 sudo cp lib64/* /usr/local/cuda/lib64/
 sudo cp include/* /usr/local/cuda/include/
+echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib64/"  >> ~/.bashrc
 
 # configure jupyter and prompt for password
 echo "\n\nConfiguring jupyter and will prompt for password...\n\n"

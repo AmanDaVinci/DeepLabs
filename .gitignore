@@ -100,18 +100,8 @@ ENV/
 # mypy
 .mypy_cache/
 
-# Huge Data Files
-data/dogscats/train/
-data/dogscats/valid/
-data/dogscats/test/
+# pycharm
+.idea
 
-# Sample Files
-data/dogscats/sample/train/
-data/dogscats/sample/valid/
-data/dogscats/sample/test/
-
-
-# Residue Files
-test.zip
-train.zip
-sample_submission.csv
+# all data files
+/data/*

@@ -7,7 +7,7 @@
 
 - We chose the learning rate where the decrease in loss is the highest, not where the loss is the lowest. This is because we cannot say anything about the lowest loss but if a learning rate causes the loss to decrease quickly that's what we were looking for in the first place. However, among all the learning rates where the slope(decrease in learning rate) are pretty high, we chose the one with highest magnitude due to the cyclical learning rate trick. The restart will guarantee that the lower learning rates will be tried along the way if we chose a learning rate which is highest amongst the good learning rates (with good slope in loss).   
 
-- Acitvations: a single number, confidence or probability
+- Activations: a single number, confidence or probability
 
 - Precomputations: precomputed activations from the earlier frozen layers which are passed to the trainable (unfrozen) layer.
 
@@ -43,9 +43,9 @@
 
 ## TODO
 ---
-- Learning Rate Tricks: Annealing (decreasing as we get closer manually or using a function), Momentum (?), Cyclical Restarts (?),  
-- Dictonary comprehension, zip(\*) notation
 - Plot loss of SGDR to see the cycles finding better minimas
+- Learning Rate Tricks: Annealing (decreasing as we get closer manually or using a function), Momentum (?), Cyclical Restarts (?)  
+- Dictonary comprehension, zip(\*) notation
 
 ## Reading & Exploring
 ---

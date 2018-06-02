@@ -39,9 +39,9 @@
 
 ## Reading & Exploring
 ---
-- Notebook: lesson1-vgg
 - Notebook: lesson1-rxt50
 - Paper: Visualizing and Understanding Convulational Networks
+-- Notebook: lesson1-vgg
 
 
 ## Questions

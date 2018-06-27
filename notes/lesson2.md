@@ -41,24 +41,40 @@
 
 - Best way to handle unbalanced datasets in deep learning is to upsample (make more copies) the minor class.
 
+* Some image features are scale invariant and some are not. Further, CNNs do improve with progressive resizing and training. Also with data augmentation. Why (scale invariance)?
+
+* Regarding network size:
+	The takeaway is that you should not be using smaller networks because you are afraid of overfitting. Instead, you should use as big of a neural network as your computational budget allows, and use other regularization techniques to control overfitting
+
 ## TODO
 ---
+
+* Dictonary comprehension, zip(\*) notation
+
+- Try large cycle lengths of 4-16 epochs as in original CLR paper (might be long because they train from scratch, confirmed)
+
 - Plot loss of SGDR to see the cycles finding better minimas
-- Learning Rate Tricks: Annealing (decreasing as we get closer manually or using a function), Momentum (?), Cyclical Restarts (?)  
-- Dictonary comprehension, zip(\*) notation
+
+- Learning Rate Tricks: Annealing (decreasing as we get closer manually or using a function), Momentum, Cyclical Restarts; (http://ruder.io/optimizing-gradient-descent/) 
+
 
 ## Reading & Exploring
 ---
-- Notebook: lesson2-image_models
+
+* Dog Breeds Notebook
+
 - Paper: Cyclical Learning Rates for Training Neural Networks
+
+- Notebook: lesson2-image_models
 
 
 
 ## Question
 ---
-- If CNNs are transformation invariant how does data augmentation help at all?
+* If CNNs are transformation invariant how does data augmentation help at all? How does progressive resizing work? Aren't CNNs scale invariant? Then how does changing the scale help it learn better?
 
-- If augmentation is not dynamic (not done randomly during run time), will precomputations work again? Also is fastai data augmentation dynamic and randomly generated for each train run? ANS: It is dynamic.
+* If augmentation is not dynamic (not done randomly during run time), will precomputations work again? Also is fastai data augmentation dynamic and randomly generated for each train run?
+	* ANS: Augmentation is dynamic. Hence, precomputation does not work with data augmentation. So we need to turn precomputation off or else it will use the cache with no augmentation
 
-- Why do we crop the image to a standard size instead of padding it? ANS: Experimentally did not work. CNNs do not find white borders interesting. Reflective padding works for satellite images. In practice, zooming seems to work better than padding. With padding the image can get arbitarily smaller. Fixed crop locations (sliding windows) might be better for test time augmentation.
-
+* Why do we crop the image to a standard size instead of padding it?
+	* ANS: Experimentally did not work. CNNs do not find white borders interesting. Reflective padding works for satellite images. In practice, zooming seems to work better than padding. With padding the image can get arbitarily smaller. Fixed crop locations (sliding windows) might be better for test time augmentation.

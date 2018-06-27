@@ -22,26 +22,30 @@
 
 ## TODO
 ---
+* Experiment with perceptrons(no activation, linear) vs neurons (activations, non-linear)
+
+- Understand Momentum and Learning Rate finder
 - Setup blog on medium and personal website
-- Experiment with perceptrons(no activation, linear) vs neurons (activations, non-linear)
-
 - Design of Experiments
-- Momentum vs Learning Rate finder
-
--- Understand Log scale
--- Understand Linear Visualizing Non-linear functions in maths
--- Organize completed notebooks (Fog Detection and Fashion MNIST)
--- Read source code with ??
--- Setup infrastructure
--- Experiment with a new dataset
--- Learn Greek Letters
+- Understand Log scale
+- Understand Linear Visualizing Non-linear functions in maths
+- Organize completed notebooks (Fog Detection and Fashion MNIST)
+- Read source code with ??
+- Setup infrastructure
+- Experiment with a new dataset
+- Learn Greek Letters
 
 
 ## Reading & Exploring
 ---
-- Notebook: lesson1-rxt50
-- Paper: Visualizing and Understanding Convulational Networks
--- Notebook: lesson1-vgg
+* Notebook: lesson1-rxt50
+
+* Blogs:
+	* Neural Network in Numpy (https://sgugger.github.io/a-simple-neural-net-in-numpy.html#a-simple-neural-net-in-numpy)
+
+* Paper: Visualizing and Understanding Convulational Networks
+
+- Notebook: lesson1-vgg
 
 
 ## Questions

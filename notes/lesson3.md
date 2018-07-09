@@ -123,8 +123,10 @@
 ## Reading & Exploring 
 ---
 
+* Paper: Entity Embeddings of Categorical Variables
 * Paper: Snapshot Ensembles
 * Paper: SGDR
+
 
 - Blogs
 	- Blog: Apil Tamang, A world class classifier for cats and dogs (err..., anything)

@@ -14,12 +14,24 @@
 
 * RNNs are nothing but for loops where hidden and input states are concatenated
 
+* Pytorch RNN input is sequence length(time steps) x batch size x input elements(hidden elements)
+
+* Regularization (Weight Decay):
+		* Extra term to the cost function lambda * sum of weight squares
+		* Regularization makes the network prefer learning small weights
+		* Large weights will be allowed only if they considerably improve the loss
+		* A compromise between finding small weights and minimizing cost function
+		* Smaller weights means that the network won't change behaviour too much with few random input changes
+		* L2 has weights squared and L1 has absolute weights
+
+
+
 ## ToDo
 ---
 
-* Notebook: Lesson6-SGD, compute gradients using differentiation rules and also by finite differencing
+* Understand 3D input tensor to pytorch RNN
 
-* Notebook: Lesson6-RNN, implement RNN
+* Notebook: Lesson6-SGD, compute gradients using differentiation rules and also by finite differencing
 
 * Use entity embeddings of rossmann from a trained neural network and use it with XGBoost or other simpler and quicker models. Visualize embeddings.  
 
@@ -30,6 +42,9 @@
 * Bi-pair encoding for combining character and word level models
 
 * Build a CharnModel with n = 3,4,5,6,7,8,9,10 and compare results
+
+- Notebook: Lesson6-RNN, implement RNN
+
 
 ## Reading & Exploring
 ---

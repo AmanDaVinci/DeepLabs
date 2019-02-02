@@ -75,10 +75,8 @@ INPUT VECTOR
 
 * Play with TorchText field and data loader. Observe how it processes each word or token
 
-* Batch formation in language modelling
 
 * All loss metrics
-
 
 * Language generation on forums
 
@@ -88,6 +86,8 @@ INPUT VECTOR
 - Data preparation with categorical, train test split, validation index split, null value filling, normalization, one hot encoding, read proc_df
 
 - Experiment with and without dropouts. Observe generalization.
+
+- Batch formation in language modelling (watch lesson7, early part)
 
 
 ## Reading & Exploring

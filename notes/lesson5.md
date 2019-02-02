@@ -58,11 +58,9 @@
 
 * Learn to see gradients of all layers and visualize/analyze them to see whats going wrong (understand numerical optimization, gradient descent)
 
-
 * Gradient Descent excel sheet and understand all SGD optimizers
 
 * Do finite differencing with own data
-
 
 * Nearest neighbour (clustering) of the entity embeddings of the movie and users for unsupervised learning of the dataset
 

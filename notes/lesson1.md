@@ -1,5 +1,9 @@
+# Lesson 1
+
 ## Key Points
+
 ---
+
 - The notebooks have extra information and they let us experiment. Experimenting is the secret to developing a strong intuition for deep learning architectures and training!
 
 - Learn on "as needed" basis. Do the entire course as fast as possible, then revisit again and again.
@@ -21,8 +25,10 @@
 - 
 
 ## TODO
+
 ---
-* Experiment with perceptrons(no activation, linear) vs neurons (activations, non-linear)
+
+*Experiment with perceptrons(no activation, linear) vs neurons (activations, non-linear)
 
 - Understand Momentum and Learning Rate finder
 - Setup blog on medium and personal website

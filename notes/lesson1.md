@@ -1,7 +1,6 @@
 # Lesson 1
 
 ## Key Points
-
 ---
 
 - The notebooks have extra information and they let us experiment. Experimenting is the secret to developing a strong intuition for deep learning architectures and training!
@@ -22,13 +21,23 @@
 
 - Linear function is anything with straight lines, planes or hyperplanes. The change/slope is always constant. It is a one degree polynomial equation. Matrix multiplications can be modelled as a linear function. However, non-linear functions have non-constant change/slope. It is a higher degree polynomial equation.
 
-- 
+- One of the limitations of modern deep learning is that the GPUs have requirements that all images be of a standard size for it to be parallelizable and fast.
+
+- For image classification tasks, resnet34 and resnet50 are always a good choice
+
+- Pick one project and do it fantastically well
+
+- Different layers of the neural network encode progressive levels of semantic complexity
+
 
 ## TODO
-
 ---
 
-*Experiment with perceptrons(no activation, linear) vs neurons (activations, non-linear)
+* Create your own problem of image classification : [how good/pro/viral is your photo?]
+* Use doc() and help()
+* Explore the documentation
+* Experiment with perceptrons(no activation, linear) vs neurons (activations, non-linear)
+* Data normalization vs batch normalization
 
 - Understand Momentum and Learning Rate finder
 - Setup blog on medium and personal website
@@ -44,12 +53,15 @@
 
 ## Reading & Exploring
 ---
+
+* Notebook: lesson1-pets
+
+* Paper: Visualizing and Understanding Convulational Networks
+
 * Notebook: lesson1-rxt50
 
 * Blogs:
 	* Neural Network in Numpy (https://sgugger.github.io/a-simple-neural-net-in-numpy.html#a-simple-neural-net-in-numpy)
-
-* Paper: Visualizing and Understanding Convulational Networks
 
 - Notebook: lesson1-vgg
 

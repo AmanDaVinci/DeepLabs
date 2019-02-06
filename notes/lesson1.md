@@ -33,12 +33,12 @@
 ## TODO
 ---
 
-* Create your own problem of image classification : [how good/pro/viral is your photo?]
-* Use doc() and help()
-* Explore the documentation
 * Experiment with perceptrons(no activation, linear) vs neurons (activations, non-linear)
 * Data normalization vs batch normalization
 
+- Create your own problem of image classification : cloud type identification
+- Explore the documentation
+- Use doc() and help()
 - Understand Momentum and Learning Rate finder
 - Setup blog on medium and personal website
 - Design of Experiments
@@ -56,14 +56,13 @@
 
 * Notebook: lesson1-pets
 
-* Paper: Visualizing and Understanding Convulational Networks
-
 * Notebook: lesson1-rxt50
 
 * Blogs:
 	* Neural Network in Numpy (https://sgugger.github.io/a-simple-neural-net-in-numpy.html#a-simple-neural-net-in-numpy)
 
 - Notebook: lesson1-vgg
+- Paper: Visualizing and Understanding Convulational Networks
 
 
 ## Questions

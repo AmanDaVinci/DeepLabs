@@ -23,11 +23,11 @@
 
 - Steps for world-class image classifier:
 	- Enable Data augmentation and turn on precomputation
-	- Find a decent learning rate using lr_fing()
+	- Find a decent learning rate using lr_find()
 	- Train last layer with precomputed activations for 1-2 epochs	
 	- Train last layer with data augmentation (precompute off) for 2-3 cycles with cycle length 1 epoch
 	- Unfreeze all layers
-	- Set earlier layers 3x to 10x (depends on the streght of transfer learning) lower than the next higher layer
+	- Set earlier layers 3x to 10x (depends on the strength of transfer learning) lower than the next higher layer
 	- Use lr_find() again to test if the last layers learning rate is still the best
 	- Train full network with cycle multiplier of 2 epochs until overfitting
 
@@ -46,27 +46,63 @@
 * Regarding network size:
 	The takeaway is that you should not be using smaller networks because you are afraid of overfitting. Instead, you should use as big of a neural network as your computational budget allows, and use other regularization techniques to control overfitting
 
+* When thinking about production, we should do inference using a CPU first unless its a Google-scale problem. This will make it horizontally scalable, cheap and simple. With GPUs we can throw a bunch of input data as a batch to perform parallel inference. However, this requires us to setup a queue system for one batch to be generated as the users submit their input data and then feed it progressively.
+
+* Training in real-time is not really required unless there exists some sort of concept drift.
+
+* Learning Rate and Epochs:
+	* If the validation loss shoots up really high, the learning rate needs to lowered
+	* If the loss plots are going down really slowly, we must increase the learning rate
+	* If the difference in training loss and validation loss is really huge, then increase the number of epochs or increase the learning rate
+	* Train loss lower than validation loss is not a sign of overfitting, the validation error increasing again is a good sign of overfitting
+
+* In python, \* is used to unpack a list (e.g. zip(\*ls) where ls is [[1,2,3],[a,b,c]]) and \*\* is used to unpack a dictionary (e.g. for passing args and values to a function using a dictionary)
+
+* Three basic steps:
+	* learn.fit_one_cycle(4, 3e-3)
+	* learn.unfreeze()
+	* learn.fit_one_cycle(4, slice(lr_find, 3e-4))
+
+* Unbalanced data seems to work fine for Jeremy. But upsampling is suggested.
+
+* A model is just a mathematical function, it doesn't take any space. The pre-trained weights are the coefficients or parameters of that function which are real numbers and do take space in memory.
+
+
 ## TODO
 ---
 
-* Dictonary comprehension, zip(\*) notation
+* Use fastai for production
+* Try picking different lr from lr_find plot and see what works
+* slice()
+
+- Dictonary comprehension, zip(\* and \*\*) notation
+
+- Async and await in python
+
+- Use ImageDataBunch properly (get_tranfroms, valid_pct, size, normalize)
+
+- Data cleaning after model training using its confidence and accuracy
+
+- Improve on Cloud Classification by exploring fastai functions: data classes
+
+- Use ?? to check documentation
 
 - Try large cycle lengths of 4-16 epochs as in original CLR paper (might be long because they train from scratch, confirmed)
 
 - Plot loss of SGDR to see the cycles finding better minimas
 
-- Learning Rate Tricks: Annealing (decreasing as we get closer manually or using a function), Momentum, Cyclical Restarts; (http://ruder.io/optimizing-gradient-descent/) 
+- Learning Rate Tricks: Annealing (decreasing as we get closer manually or using a function), Momentum, Cyclical Restarts-(http://ruder.io/optimizing-gradient-descent/)
 
 
 ## Reading & Exploring
 ---
 
-* Dog Breeds Notebook
+* Notebook: lesson2-download
+* Notebook: lesson2-sgd
 
 - Paper: Cyclical Learning Rates for Training Neural Networks
 
 - Notebook: lesson2-image_models
-
 
 
 ## Question

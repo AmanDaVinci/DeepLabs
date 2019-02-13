@@ -67,13 +67,20 @@
 
 * A model is just a mathematical function, it doesn't take any space. The pre-trained weights are the coefficients or parameters of that function which are real numbers and do take space in memory.
 
+* If we do not multiply the gradients with a learning rate or keep the learning rate as 1, we see that the model oscillates and diverges. This is because with each gradient we move in a good directions but with arbitary magnitude. As we move away the maginute keeps getting larger and larger. The same phenomenon is observed with a learning rate of -1.
+
+* The lower the batch size the more the model jumps abruptly at every step. With a higher batch size, the model iterations are more sure and confident about the preceeding steps which makes the training process very smooth.
+
 
 ## TODO
 ---
 
-* Use fastai for production
+* Test fastai for CloudClassification production
 * Try picking different lr from lr_find plot and see what works
-* slice()
+
+- Write Stochastic Gradient Descent
+
+- slice()
 
 - Dictonary comprehension, zip(\* and \*\*) notation
 
@@ -97,8 +104,9 @@
 ## Reading & Exploring
 ---
 
-* Notebook: lesson2-download
-* Notebook: lesson2-sgd
+- Notebook: lesson2-sgd
+
+- Notebook: lesson2-download
 
 - Paper: Cyclical Learning Rates for Training Neural Networks
 

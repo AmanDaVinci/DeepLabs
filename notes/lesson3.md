@@ -99,21 +99,37 @@
 	* Ensembling is training neural networks with different initialization causing convergence to different solutions
 	* Averaging over predictions from these models leads to drastic reduction in error rates
 
+* Correcting a model can be done by training on a batch of misclassified images with correct labels with a slightly higher learning rate
 
 ## TODO
 ---
 
-* Deep Learning (categorical embeddings) on structured data
+* Understand Data Block API
+	* Fastai Dataset
+	* Pytorch DataLoader
+	* Fastai Databunch
+	* Read documentation
+	* Read blog
+* Image augmentations in fastai
+* Partial functions in python
 
-* Single file prediction
+---
+* Explore satellite imaging for ideas
+* Explore Kaggle for new ideas
+
+---
 * Model for multi-label classification using sigmoid activation vs softmax
-* Various architecture for lesson 1
-* Analyse model summaries of vgg and resnet
+
 * Play with dataloader, datasets, generator, iterator concepts
 * Dataset(single) vs Dataloader(batch)s
-* Learn more python: class inheritance, enumerate, zip
-* Experiment with high learning rates and see failure to convergence and even real divergence; already done using lr.find.plot_loss(), need to mark no improvement zone and real divergence
 
+* Deep Learning (categorical embeddings) on structured data
+* Experiment with high learning rates using lr.find.plot_loss()
+	* see failure to convergence
+	* see even real divergence
+	* need to mark no improvement zone and real divergence
+
+---
 - Batch Normalization
 - Plot Loss Change source code
 - Use learn.sched.plot_loss()
@@ -123,12 +139,15 @@
 ## Reading & Exploring 
 ---
 
+* Notebook: lesson3-planet
+* Documentation: data_block
+
 * Paper: Entity Embeddings of Categorical Variables
 * Paper: Snapshot Ensembles
 * Paper: SGDR
 
-
 - Blogs
+	* Blog: Wayde Gilliam, Finding Data Block Nirvana
 	- Blog: Apil Tamang, A world class classifier for cats and dogs (err..., anything)
 	- Blog: Pavel Surmenok, Estimating an optimal learning rate for deep neural networks
 	- Blog: Visualizing learning rate vs batch size, miguel-data-sc.github.io

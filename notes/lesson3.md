@@ -76,7 +76,7 @@
 * Visualization of Gradient Descent Optimizers:
 	![SGD optimization on loss surface contours](contours_evaluation_optimizers.gif)
 	![SGD optimization on saddle point](saddle_point_evaluation_optimizers.gif)
-
+ 
 * What Gradient Descent Optimization to use:
 	* Always use adaptive learning rates for sparse data
 	* RMSprop is an extension of Adagrad that handles diminishing learning rates
@@ -101,17 +101,32 @@
 
 * Correcting a model can be done by training on a batch of misclassified images with correct labels with a slightly higher learning rate
 
+* Transfer learning can be done by training on smaller sized images and then training on original size images
+
+* Batch size is smaller where each training sample is huge
+
+* Draw the weight topology with bumps to understand cyclical learning rate
+
+* Use the same stats that the model was trained with
+
 ## TODO
 ---
 
-* Understand Data Block API
-	* Fastai Dataset
-	* Pytorch DataLoader
-	* Fastai Databunch
-	* Read documentation
-	* Read blog
-* Image augmentations in fastai
-* Partial functions in python
+* Experiment with mixed precision in U-net training
+
+* Experiment Progressive Resizing on Planet:
+	* Train by transfer learning from small size to original size
+	* Train straight on the original size
+
+- Understand Data Block API
+	- Fastai Dataset
+	- Pytorch DataLoader
+	- Fastai Databunch
+	- Read documentation
+	- Read blog
+- Image augmentations in fastai
+- Partial functions in python
+- Read U-Net for Image Segmentation
 
 ---
 * Explore satellite imaging for ideas
@@ -136,18 +151,22 @@
 - Minimum size, Freeze, Train with optimal lr, Unfreeze, Train with differential lr, Increase Size, Repeat
 - Play with F-Beta score
 
+
 ## Reading & Exploring 
 ---
 
+* Notebook: lesson3-camvid
 * Notebook: lesson3-planet
-* Documentation: data_block
+* Notebook: lesson3-head-pose
+
+- Documentation: data_block
 
 * Paper: Entity Embeddings of Categorical Variables
 * Paper: Snapshot Ensembles
 * Paper: SGDR
 
 - Blogs
-	* Blog: Wayde Gilliam, Finding Data Block Nirvana
+	- Blog: Wayde Gilliam, Finding Data Block Nirvana
 	- Blog: Apil Tamang, A world class classifier for cats and dogs (err..., anything)
 	- Blog: Pavel Surmenok, Estimating an optimal learning rate for deep neural networks
 	- Blog: Visualizing learning rate vs batch size, miguel-data-sc.github.io

@@ -65,6 +65,10 @@ INPUT VECTOR
 	* You can check if your validation set is any good by seeing if your model has similar scores on it to compared with on the Kaggle test set
 	* It can be instructive to see exactly what you’re getting wrong on the validation set, and Kaggle doesn’t tell you the right answers for the test set or even which data points you’re getting wrong, just your overall score.
 
+* Neural Networks as Universal Function Approximator:
+	* Matrix multiplication followed by matrix multiplication is just linear function on top of linear functions:
+	y = ax + b & w = my + n -> w = (ma)x + (mb + n) [new slope & intercept]
+	* However, adding an activation function which is non-linear makes it like stacking non-linearity over linearity which makes the entire operation non-linear
 
 ## TODO
 ---

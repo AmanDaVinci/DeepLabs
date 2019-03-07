@@ -7,8 +7,6 @@
 
 * Entity embeddings is the crux of deep learning on structured data. Collaborative filtering is doing embedding from matrices and doing matrix factorization, Try out the various embedding dimensionality. Need to understand the how many factors are required to model the physical system.
 
-* For each movie, we have some numbers that represent that movie. Same for users. When we do a dot product of the latent factors, we get the user to movie rating number. Conceptually, similarity between the embedding factors of all users and movies. Making collaborative filtering as a neural network with embedding dot product. Adding bias to users and movies as a constant which decides if the movie is popular or the user is a movie buff. Sigmoid to transform an output from 0 to 1 and the multiply with maximum rating.
-
 * Matrix weights with kerr initialization with sd dependent on number of factors
 
 * Pytorch train models with dataloaders with one mini-batch at a time. User doesn't need to loop thru each sample in the mini-batch and if he does so, gpu acceleration cannot be used
@@ -21,7 +19,8 @@
 
 * Finite Differencing: Way of calculating derivatives. Derivative can be thought of change in one variable over a small change in the dependent variable: dE/dx = (E_x1-E_x2)/0.001 where x1 is slightly different than x2. A computer never does anything continuous but does it at discrete steps. Similarly, we humans can or need to think of differentials or integrals (differentials) with examples in real numbers. Kind of like tricks to visualize higher dimensions
 
-* Neural network is just a function of a function or a function
+* Concept of Neural Network:
+	* just non-affice functions (relu) sandwiched between affine functions (matrix multiplication) 
 
 * Backpropation is taking derivative of each layer wrt to previous layer and multiplying all of them together. Nothing but chain rule applied to layers. PyTorch has autograd (automatic differentiation) which has all the diferentiation rules. Neural networks have no neuron activations but matrices multiplications, ReLu is nothing but throwing away the negative values.
 
@@ -36,21 +35,41 @@
 * L2 regularization / Weight decay: Do not change the weights a lot if it doesn't increase the loss upto to some significant level. Helps to avoid overfitting
 
 * Dot vs Cross Product:
-	* Dot product, the interactions between similar dimensions (x * x + y * y + z * z)
-	* Cross product, the interactions between different dimensions (x * y, y * z,  z * x,   etc.)
+	* Dot product, the interactions between similar dimensions (x\*x + y\*y + z\*z)
+	* Cross product, the interactions between different dimensions (x\*y, y\*z, z\*x)
 	* The dot product (vec(a) · vec(b)) measures similarity because it only accumulates interactions in matching dimensions
 
+* Three layer groups in fastai by default:
+	* One for newly added head
+	* The pre-trained layers split in two
+
+* Affine functions are linear functions + constant:
+	* In 1D: y = Ax + b
+	* linear transformation followed by a translation
+	* like matrix multiplication or convolution
+
+* Embeddings in code:
+	* looking up an array is identical to matrix multiplication by a one-hot encoded matrix
+	* array lookup is computationally efficient
+
+* Latent features emerge in the trained neural networks which capture semantics
+
+* Use encoding latin-1 (older datasets) when utf-8 does not work 
+
+* Use scaled sigmoid (min to max prediction range) to assist the network in choosing within a valid range. Make the max slightly higher since sigmoid asymtotes at max and will never be able to reach max on its own.
+
+* Try and run experiments to be a good practioner
+
+* Take weights or activations of any layer and do PCA to analyse and understand  
 
 ## TODO
 ---
 
-* Lesson 5: Movielens notebook
+* collab_filter excel sheet
 
 * Implement EmbeddingDot model from scratch by reading fastai library (ColumnarModelData, fit, column_data.py, set_lrs)
 
 * Add genre, timestamp feature, different dropouts and more hidden layers to the neural network approach to collaborative filtering
-
-* Collaborative Filter excel sheet
 
 * Broadcasting in numpy and pytorch
 
@@ -76,26 +95,26 @@
 ## Reading & Exploring
 ---
 
-* Paper: Weight Decay, ADAMw, Momentum
+* Books:
+	* Neural Network & Deep Learning web book chapt.4
+
+* Paper:
+	* Weight Decay, ADAMw, Momentum
+	* Kaiming He initialization [jefkine.com: Initialization of Deep Networks Case of Rectifiers]
 
 * Blogs:
+	* Yes you should understand backprop Medium
 	* Structured Deep Learning [Medium Towards Data Science]
 	* How do we train neural networks? [Medium] Good technical writing
 
-* Paper: Kaiming He initialization [jefkine.com: Initialization of Deep Networks Case of Rectifiers]
 
 * Pytorch functional & nn modules
-
 * Deep learning on small dataset
-
 * Notation as a tool for thought
-
 * Gradient Descent excel sheet (tabs right to left)
 
 * Jacobian and Hessian for optimizing with finite differencing
-
 * Linear Interpolation: alpha(...) + (1-alpha)(...)
-
 * L2 regularization / Weight Decay
 
 

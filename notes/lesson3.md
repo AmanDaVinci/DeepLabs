@@ -111,22 +111,13 @@
 
 ## TODO
 ---
-
-* Experiment with mixed precision in U-net training
+* Mixed precision training:
+	* General idea
+	* Implementation idea
 
 * Experiment Progressive Resizing on Planet:
 	* Train by transfer learning from small size to original size
 	* Train straight on the original size
-
-- Understand Data Block API
-	- Fastai Dataset
-	- Pytorch DataLoader
-	- Fastai Databunch
-	- Read documentation
-	- Read blog
-- Image augmentations in fastai
-- Partial functions in python
-- Read U-Net for Image Segmentation
 
 ---
 * Explore satellite imaging for ideas
@@ -145,6 +136,19 @@
 	* need to mark no improvement zone and real divergence
 
 ---
+- Create 'Images with fastai' notebook
+
+- Understand Data Block API
+	- Fastai Dataset
+	- Pytorch DataLoader
+	- Fastai Databunch
+	- Read documentation
+	- Read blog
+- Image augmentations in fastai
+- Partial functions in python
+- Read U-Net for Image Segmentation
+
+---
 - Batch Normalization
 - Plot Loss Change source code
 - Use learn.sched.plot_loss()
@@ -155,15 +159,15 @@
 ## Reading & Exploring 
 ---
 
-* Notebook: lesson3-camvid
-* Notebook: lesson3-planet
-* Notebook: lesson3-head-pose
-
-- Documentation: data_block
-
 * Paper: Entity Embeddings of Categorical Variables
 * Paper: Snapshot Ensembles
 * Paper: SGDR
+
+- Notebook: lesson3-camvid
+- Notebook: lesson3-planet
+- Notebook: lesson3-head-pose
+
+- Documentation: data_block
 
 - Blogs
 	- Blog: Wayde Gilliam, Finding Data Block Nirvana

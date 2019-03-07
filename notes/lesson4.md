@@ -27,12 +27,13 @@ underfitting.
 * Forward Pass; Matrix multiplication changes the dimensionality of a vector.
 
 ```
-INPUT VECTOR
-(1 x 20)	->	[20 x 100] WEIGHT LAYER#1
+INPUT VECTOR (batch x features)
+
+(1 x 20)	->	[20 x 100] WEIGHT LAYER#1 (Parameters)
 					|
 					| ACTIVATION
 					v
-				(1 x 100)	->	[100 x 2] WEIGHT LAYER#2
+				(1 x 100)	->	[100 x 2] WEIGHT LAYER#2 (Parameters)
 									|
 									| ACTIVATION
 									v
@@ -70,38 +71,79 @@ INPUT VECTOR
 	y = ax + b & w = my + n -> w = (ma)x + (mb + n) [new slope & intercept]
 	* However, adding an activation function which is non-linear makes it like stacking non-linearity over linearity which makes the entire operation non-linear
 
+* Use transfer learning whenever possible: no point in starting with random weights
+
+* For Kaggle NLP challenges use the test set during the language model training as well
+
+* Activation Functions:
+	* sigmoid: limits activation blowup but causes vanishing gradients
+	* tanh: output is zero-centered so preferred over sigmoid, causes vanishing gradients & activation blowup
+	* relu: avoids vanishing gradients, faster due to simpler function, causes dead neurons
+	* leaky relu: solves dead neurons by having small negative slope
+	* softmax: turns number into probabilities, paired with cross entropy loss
+
+* Collaborative filtering has Cold Start problem
+	* Solved by UX like Netflix
+	* Solved by using a model trained on metadata
+
+* For domain specific language modelling like Hindi in English or Pinyin for Mandarin, it must be trained on that language's corpus instead of wikitext103
+
+* For tabular style timeseries RNN is not the best option, rather feature engineering in terms of day of week, seasonality, etc. are more practical
+
+* Embedding matrix is a collection of feature vectors for each sample/user/movie/word
+
+* To design a better architecture, make it easier to learn the right thing
+
+
 ## TODO
 ---
 
+- lesson3-imdb
+- lesson4-tabular
+- collab_filter excel sheet
+- Practice neural network terminology
+
+- lesson4-collab
+- Start exploring fastai with get_embed_learner
+
+---
+
+* Language generation systems using fastai - recent Jeremy tweet:
+	* Transformer
+	* Beam search
+	* Pick trained model(domain) from Model-Zoo
+* Find philosohpy on what can be learned by studying language alone?
+
+* Check forums for solving Cold Start problem in fastai
+* Random Forest to do hyperparameter searching in neural networks
+* Use timestamp for collab filtering
+
+---
 * Experiment with various levels of dropouts in all the different layers. Find some rule of thumb. (1. Put same dropout on every single fc layer. 2. Put dropout only on the last layer)
 
 * Categorical date embeddings to capture seasonality in timeseries
 
 * Play with TorchText field and data loader. Observe how it processes each word or token
 
-
-* All loss metrics
-
-* Language generation on forums
-
 * Try transfer learning approaches on other NLP domains (text normalization)
 
-
+---
 - Data preparation with categorical, train test split, validation index split, null value filling, normalization, one hot encoding, read proc_df
-
 - Experiment with and without dropouts. Observe generalization.
-
 - Batch formation in language modelling (watch lesson7, early part)
+- Using debugger in notebooks
+- All activation functions
+- Datablock api for Text
+- Datablock api for Tabular
+- Use transformer instead of LSTM (huge parameters)
 
 
 ## Reading & Exploring
 ---
 
-* lesson4- imdb
-
-* Entropy example sheet
-
-* Dropout paper
+* Blogs:
+	* Self-supervised learning:
+		https://towardsdatascience.com/a-different-kind-of-deep-learning-part-1-90fe6c52f1ab
 
 - lesson3- Rossman
 	* Very thoughtful data cleaning and feature engineering

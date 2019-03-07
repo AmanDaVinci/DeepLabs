@@ -75,12 +75,12 @@
 ## TODO
 ---
 
-* Analyse lr_find:
-	* plot everything
-	* lr plot before and after unfreeze
-	* Try picking different lr from lr_find plot and experiment
-
 * Test fastai for CloudClassification production
+
+- Analyse lr_find:
+	- plot everything
+	- lr plot before and after unfreeze
+	- Try picking different lr from lr_find plot and experiment
 
 - Write Stochastic Gradient Descent
 

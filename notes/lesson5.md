@@ -65,29 +65,22 @@
 ## TODO
 ---
 
-* collab_filter excel sheet
-
-* Implement EmbeddingDot model from scratch by reading fastai library (ColumnarModelData, fit, column_data.py, set_lrs)
-
-* Add genre, timestamp feature, different dropouts and more hidden layers to the neural network approach to collaborative filtering
-
+- Interpretation of Collab Learner
+* Collab_filter excel sheet
 * Broadcasting in numpy and pytorch
-
 * Understand python function with args, kwargs
-
-* Learn to see gradients of all layers and visualize/analyze them to see whats going wrong (understand numerical optimization, gradient descent)
-
-* Gradient Descent excel sheet and understand all SGD optimizers
-
-* Do finite differencing with own data
-
 * Nearest neighbour (clustering) of the entity embeddings of the movie and users for unsupervised learning of the dataset
 
-* Online collaborative filtering
+* Learn to see gradients of all layers and visualize/analyze them to see whats going wrong (understand numerical optimization, gradient descent)
+* Gradient Descent excel sheet and understand all SGD optimizers
+* Do finite differencing with own data
 
-* Add more hidden layers in the embedding network
-
+* Collaborative filtering NN approach:
+	* add genre, timestamp feature
+	* different dropouts
+	* more hidden layers
 * Collaborative filtering with binary data using classification concepts
+* Online collaborative filtering
 
 - Visualize Matrix Multiplication better
 
@@ -107,11 +100,9 @@
 	* Structured Deep Learning [Medium Towards Data Science]
 	* How do we train neural networks? [Medium] Good technical writing
 
-
 * Pytorch functional & nn modules
 * Deep learning on small dataset
 * Notation as a tool for thought
-* Gradient Descent excel sheet (tabs right to left)
 
 * Jacobian and Hessian for optimizing with finite differencing
 * Linear Interpolation: alpha(...) + (1-alpha)(...)

@@ -62,14 +62,18 @@
 
 * Take weights or activations of any layer and do PCA to analyse and understand  
 
+* Python args & kwargs:
+	* Python function with *args take variable sized non-keyword arguments as a list or collection
+	* Python function with *kwargs take variable sized keyword arguments as a dict
+
 ## TODO
 ---
 
 - Interpretation of Collab Learner
-* Collab_filter excel sheet
-* Broadcasting in numpy and pytorch
-* Understand python function with args, kwargs
-* Nearest neighbour (clustering) of the entity embeddings of the movie and users for unsupervised learning of the dataset
+- Collab_filter excel sheet
+- Broadcasting in numpy and pytorch
+- Understand python function with args, kwargs
+- Nearest neighbour (clustering) of the entity embeddings of the movie and users for unsupervised learning of the dataset
 
 * Learn to see gradients of all layers and visualize/analyze them to see whats going wrong (understand numerical optimization, gradient descent)
 * Gradient Descent excel sheet and understand all SGD optimizers

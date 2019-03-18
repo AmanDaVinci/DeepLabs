@@ -3,6 +3,8 @@ export ZONE="asia-southeast1-b" # budget: "us-west1-b"
 export INSTANCE_NAME="davinci"
 export INSTANCE_TYPE="n1-standard-8" # budget: "n1-highmem-4"
 
+gcloud compute ssh --zone=$ZONE jupyter@$INSTANCE_NAME -- -L 8080:localhost:8080
+
 # budget: 'type=nvidia-tesla-k80,count=1'
 gcloud compute instances create $INSTANCE_NAME \
         --zone=$ZONE \
@@ -15,4 +17,3 @@ gcloud compute instances create $INSTANCE_NAME \
         --metadata="install-nvidia-driver=True" \
         --preemptible
 
-gcloud compute ssh --zone=$ZONE jupyter@$INSTANCE_NAME -- -L 8080:localhost:8080

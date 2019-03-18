@@ -59,9 +59,9 @@
 * In python, \* is used to unpack a list (e.g. zip(\*ls) where ls is [[1,2,3],[a,b,c]]) and \*\* is used to unpack a dictionary (e.g. for passing args and values to a function using a dictionary)
 
 * Three basic steps:
-	* learn.fit_one_cycle(4, 3e-3)
+	* learn.fit_one_cycle(4, lr_find)
 	* learn.unfreeze()
-	* learn.fit_one_cycle(4, slice(lr_find, 3e-4))
+	* learn.fit_one_cycle(4, slice(lr_find, old_lr/10))
 
 * Unbalanced data seems to work fine for Jeremy. But upsampling is suggested.
 

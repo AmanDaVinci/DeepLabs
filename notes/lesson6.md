@@ -96,20 +96,27 @@
 		* the final activations are averaged across channels
 		* height x width x channels -> 1 x channels
 
+* fastai vision transformation:
+	* max_lighting is the range of change beyond 0.5 in brightness function
 	
 ## ToDo
 ---
 
+* fastai Hook class
+
+* Plot mean & std of activations & parameters to analyze training
+
+
 - Pytorch Hooks
-* Pytorch practice:
-	* Grab one data item, normalize and put on GPU
+- Pytorch practice:
+	- Grab one data item, normalize and put on GPU
 	- create minibatch: add new dim to data
 		- xb = x[None]; works with Numpy
 		- xb = x.unsqueeze(0); pytorch specific, faster
 
-* Notebook: lesson6-pets-more
-	* data augmentation
-	* convolution activation map
+- Notebook: lesson6-pets-more
+	- data augmentation
+	- convolution class activation map
 ---
 
 * Notebook: lesson6-rossmann

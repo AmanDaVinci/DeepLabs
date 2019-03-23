@@ -96,10 +96,38 @@ x3, y3 = next(it)
 it.close()
 ```
 
+* Validation set implementation:
+	* does not need to be shuffled since the loss will be summed across bs
+	* double the batch size: does not do backprop so grads are not stored
+
+* PYTORCH:
+	torch.nn
+		* nn.Module:
+		        * makes it into a callable as a function
+		        * contains state like layer weights
+		* nn.Parameters:
+		        * tells the Module that these weights needs to be updated during backprop
+		        * only Parameters with requires_grad=True are updated
+		* nn.functional:
+		        * contains loss functions, activation functions, etc
+		        * contains non-stateful versions of convolution and linear layers
+
+	torch.optim:
+	    * coatains optimizers such as SGD
+	    * step() to update weights with computed grads
+	    * zero_grad() to zero out grads after each step 
+
+	Dataset:
+	    * wrapper around tensor objects with __len__ and __getitem__
+
+	 DataLoader:
+	    * Takes any Dataset and iterates over it in batches
+	    * Implemented with a for loop over an iter object yielding in its body
+
 ## TODO
 --- 
 
-* Pytorch Tutorial by Jeremy
+- Pytorch Tutorial by Jeremy
 
 * Notebooks (top down approach)
 	* lesson7-resnet-mnist
@@ -147,3 +175,6 @@ it.close()
 
 ## Questions
 ---
+
+* Can we think of the .clamp_min(0.)-0.5 as essentially a version of Leaky Relu?
+	* 
